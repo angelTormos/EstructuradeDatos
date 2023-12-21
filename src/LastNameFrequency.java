@@ -13,20 +13,30 @@ public class LastNameFrequency {
 
         BufferedReader reader = new BufferedReader(new FileReader("/media/alu10675957/T7/LastnameFrequencies.csv"));
         String line;
-        String apellido;
+        String apellido = " ";
+        String rep;
+        String valor;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce un apellido");
-        apellido = scanner.next();
 
         while ((line = reader.readLine()) != null) {
             String[] actual = line.split(",");
-             apellido = actual[0];
-            String rep = actual[1];
-            contador.put(apellido, rep);
-            break;
+            if (actual.length == 2){
+                apellido = actual[0];
+                rep = actual[1];
+                rep  = rep.replaceAll("\\.","");
+                contador.put(apellido, rep);
+            }
         }
-        reader.close();
-        System.out.println(contador);
+        System.out.println("Introduce un apellido");
+
+        while (true){
+            apellido = scanner.nextLine();
+            if (apellido.equals("")){
+                reader.close();
+                System.exit(0);
+            }
+            System.out.println(contador.get(apellido));
+        }
     }
 }

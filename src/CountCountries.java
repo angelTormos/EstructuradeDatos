@@ -14,7 +14,7 @@ public class CountCountries {
         BufferedReader reader = new BufferedReader(new FileReader("/media/alu10675957/T7/Colfuturo-Seleccionados.csv"));
         String line;
         while ((line = reader.readLine()) != null) {
-            line.split(",");
+            line.spli t(",");
             String[] actual = line.split(",");
             String pais = actual[6];
                 int rep = 1;

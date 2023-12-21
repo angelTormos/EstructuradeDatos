@@ -2,17 +2,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Botin {
-    public static String repartir(int participantes, int ... billetes){
-        HashMap<Integer, ArrayList<Integer>> reparto = new HashMap<>();
+    public static HashMap<Integer, String> repartir(int participantes, int ... billetes) {
+        HashMap<Integer, String> reparto = new HashMap<>();
+        ArrayList<Integer> lista = new ArrayList<>();
 
-        for (int i = 0; i < billetes[0]; i++) {
-            ArrayList<Integer> lista = new ArrayList<>();
-        if (participantes % 10 == 0) {
-            lista.add(billetes[i]);
+        for (int billete : billetes) {
+            lista.add(billete);
         }
-            reparto.put(i, lista);
-        }
-        return reparto.toString();
+
+        do {
+            for (int j = 0; j < participantes; j++) {
+                int actual = lista.get(0);
+                if (reparto.containsKey(j)) {
+                    reparto.replace(j, reparto.get(j) + ", " + actual);
+                } else reparto.put(j, String.valueOf(actual));
+                lista.remove(0);
+                if (lista.isEmpty()) {
+                    break;
+                }
+            }
+        }while (!lista.isEmpty());
+
+        return reparto;
     }
 
     public static void main(String[] args) {

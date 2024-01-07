@@ -9,7 +9,7 @@ public class PaisCapital {
     }
 
     public static void main(String[] args) {
-
+        //OK
         Map<String, String> paisesycapiales = new HashMap<>();
             paisesycapiales.put("España", "Madrid");
             paisesycapiales.put("Francia", "Paris");

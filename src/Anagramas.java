@@ -7,6 +7,7 @@ public class Anagramas {
 
 
     public static void main(String[] args) throws IOException {
+        //OK
         int minGroupSize = 5;
 
         Map<String, List<String>> m = new HashMap<String, List<String>>();

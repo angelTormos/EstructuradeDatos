@@ -12,6 +12,7 @@ public class TelefonosII {
     }
 
     public static void main(String[] args) {
+        //OK
         ArrayList<String> telefonos = new ArrayList<>();
         Map<String, ArrayList<String>> agenda = new HashMap<>();
 

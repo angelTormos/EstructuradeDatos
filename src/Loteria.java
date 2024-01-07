@@ -19,7 +19,7 @@ public class Loteria {
     }
 
     public static void main(String[] args) {
-
+        //OK
         ArrayList<String> loteria = new ArrayList<>();
 
         loteria.add("58975");

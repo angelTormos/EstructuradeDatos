@@ -19,7 +19,7 @@ public class Frecuency {
     }
 
     public static void main(String[] args) {
-
+        //OK
         ArrayList<String> palabras = new ArrayList<>();
 
        String palabra;

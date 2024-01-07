@@ -12,6 +12,7 @@ public class TelefonosI {
     }
 
     public static void main(String[] args) {
+        //OK
         Map<String, String> agenda = new HashMap<>();
 
         String contacto;
